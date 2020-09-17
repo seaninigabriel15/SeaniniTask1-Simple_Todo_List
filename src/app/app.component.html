@@ -1,0 +1,49 @@
+<body>
+  <div class="container">
+  <div id="task-container"><!----css # (id)-->
+      <div id="form-wrapper">
+          <form id="form" (ngSubmit)="onSubmit()" #todoForm="ngForm" >    
+                  <div class="flex-wrapper">
+
+               <div style="flex: 6">                      
+   <input type="text" class="form-control" id="taskTitle" placeholder="Enter Task Here" required [(ngModel)]="tasks.taskTitle" name="title" #title="ngModel">
+               </div>   
+                           
+
+                    <div style="flex: 1">
+                      <button type="submit" id="submit" class="btn btn-sm btn-success">Submit</button>     
+                    </div>      
+                  </div>  
+                  <br>
+                  <div class ="txtTask">
+                    Tasks:{{   remaining()   }} remaining task of  {{getTotal()}}
+                    
+                  </div>  
+                  <div *ngIf="atLeastOneCompleted()">
+                  <button class="btn btn-sm btn-info pull-right" (click)="clearCompleted()">Clear Completed</button>        
+                </div>           
+          </form>
+      </div>
+     
+    
+      <div id="list-wrapper">
+
+        <div class="task-wrapper flex-wrapper" *ngFor="let item of taskslist">
+          <div style="flex:7">
+              <span [className]="item.completed ? 'finish-title' : 'title'"  (click)="FinishTodo(item.id)">{{item.taskTitle}}</span>
+          </div>
+
+          <div style="flex:1">
+            <button class="btn btn-sm btn-info edit" (click)="FuncEdit(item.id)">Edit </button>
+          </div>
+
+          <div style="flex:1">
+            <button class="btn btn-sm btn-danger delete" (click)="FuncDelete(item.id)">Delete</button>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+</body>
+<!-- <router-outlet></router-outlet> -->
