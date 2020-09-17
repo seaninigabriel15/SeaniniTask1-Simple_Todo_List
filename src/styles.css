@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files 
+table, th , td  {
+    border: 1px solid red;
+    border-collapse: collapse;
+    padding: 5px;
+  }
+  form,label,input  {
+   
+    padding: 5px;
+  }
+input{
+  margin-top: 10px;
+}
+  table tr:nth-child(odd) {
+    background-color: #f1f1f1;
+  }
+  table tr:nth-child(even) {
+    background-color: #ffffff;
+  }
+  a{
+    color: blue;
+    font-size: 10px;
+  }
+
+  a:hover{
+    cursor: pointer;
+    color:blue;
+  }*/
+
+  
