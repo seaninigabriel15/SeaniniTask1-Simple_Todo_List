@@ -60,25 +60,25 @@ export class AppComponent implements OnInit{
     }    
   }
 
-  // get toatal number of tasks
-  getTotal = function(){
-    return this.taskslist.length; 
-  };
+    // get toatal number of tasks
+    getTotal = function(){
+      return this.taskslist.length; 
+    };
 
-  // total number of remaining to do's
-  remaining(): number {
-    return this.taskslist.filter(tasks => tasks.completed).length;
-  }
+    // total number of remaining to do's
+    remaining(): number {
+      return this.taskslist.filter(tasks => tasks.completed).length;
+    }
 
-  //if 1 is completed
-  atLeastOneCompleted(): boolean {
-    return this.taskslist.filter(tasks => tasks.completed).length > 0;
-  }
+    //if 1 is completed
+    atLeastOneCompleted(): boolean {
+      return this.taskslist.filter(tasks => tasks.completed).length > 0;
+    }
 
-  //clear the completed tasks from list
-  clearCompleted(id): void {
-    this.taskslist = this.taskslist.filter(tasks => !tasks.completed);
-  }
+    //clear the completed tasks from list
+    clearCompleted(id): void {
+      this.taskslist = this.taskslist.filter(tasks => !tasks.completed);
+    }
 
 
   ngOnInit(){
