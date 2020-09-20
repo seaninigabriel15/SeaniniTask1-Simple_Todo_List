@@ -1,10 +1,20 @@
-# SeanTodoList
+# Simple TodoList using Angular 6 with json file
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.9.
+
+## Installation Process
+[Node JS] (https://nodejs.org/en/download/)
+[Angular ClI](https://www.npmjs.com/package/@angular/cli)
+[bootstrap 3 and configuration on Angular.json](https://loiane.com/2017/08/how-to-add-bootstrap-to-an-angular-cli-project/)
+[Json Server](https://www.npmjs.com/package/json-server)
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Json server
+
+Under src/asset of the file location run commeand `json-server -p 9999 tasks.json` '-p' declaration of the port to use.
 
 ## Code scaffolding
 
