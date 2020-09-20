@@ -29,11 +29,11 @@ h1, h2, h3, h4, h5, p, span, strike {
 }
 
 #submit {
-    margin-top: 5px;
     border-radius: 5;
     border: 0;
     color: #fff;
     margin-left: 12px;
+    margin-top: 5px;
 }
 
 .flex-wrapper {
