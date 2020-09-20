@@ -3,24 +3,25 @@
    <div id="task-container"><!----css # (id)-->
       <div id="form-wrapper">
           <form id="form" (ngSubmit)="onSubmit()" #todoForm="ngForm" >    
-                  <div class="flex-wrapper">
+           <div class="flex-wrapper">
 
-               <div style="flex: 6">                      
-   <input type="text" class="form-control" id="taskTitle" placeholder="Enter Task Here" required [(ngModel)]="tasks.taskTitle" name="title" #title="ngModel">
-               </div>   
-                           
-
-                    <div style="flex: 1">
-                      <button type="submit" id="submit" class="btn btn-sm btn-success">Submit</button>     
-                    </div>      
-                  </div>  
-                  <br>
-                  <div class ="txtTask">
-                    <b>Task Completed:</b> {{ remaining() }} / {{  getTotal()  }} Tasks
-                  </div> 
-                  <div *ngIf="atLeastOneCompleted()">
-                  <button class="btn btn-sm btn-info pull-right" (click)="clearCompleted()">Clear Completed</button>        
-                </div>           
+              <div style="flex: 6">                      
+                    <input type="text" class="form-control" id="taskTitle" placeholder="Enter Task Here" required 
+                    [(ngModel)]="tasks.taskTitle" name="title" #title="ngModel">
+                </div>   
+                              
+              <div style="flex: 1">
+                    <button type="submit" id="submit" class="btn btn-sm btn-success">Submit</button>     
+                </div> 
+           </div>  
+    <br>
+                    <div class ="txtTask">
+                      <b>Task Completed:</b> {{ remaining() }} / {{  getTotal()  }} Tasks
+                    </div> 
+                    
+                    <div *ngIf="atLeastOneCompleted()">
+                           <button class="btn btn-sm btn-info pull-right" (click)="clearCompleted()">Clear Completed</button>        
+                    </div>           
           </form>
       </div>
      
