@@ -1,5 +1,5 @@
 export interface Todomodel {
-   id: number,
-   taskTitle: string,
-  completed: boolean
-  }
+            id: number,
+            taskTitle: string,
+            completed: boolean
+         }

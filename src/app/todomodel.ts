@@ -4,8 +4,7 @@ export class Todomodel {
         public id: number,
         public taskTitle: string,
         public completed: boolean
-        ){
-            
+        ){     
         }
 }
 
