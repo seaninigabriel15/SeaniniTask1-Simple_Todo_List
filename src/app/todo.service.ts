@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { todomodel } from './todomodel';
+import { Todomodel } from './todomodel';
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
 
@@ -19,30 +19,30 @@ export class TodoService {
 
 
   // HttpClient API get() method => Fetch todos list
-  getTodoList(): Observable<todomodel[]> {
-    return this.http.get<todomodel[]>(this.apiURL + '/tasks')
+  getTodoList(): Observable<Todomodel[]> {
+    return this.http.get<Todomodel[]>(this.apiURL + '/tasks')
   }
 
   // HttpClient API get() method => Fetch specific task
-  getTodo(id): Observable<todomodel> {
-    return this.http.get<todomodel>(this.apiURL + '/tasks/' + id)
+  getTodo(id): Observable<Todomodel> {
+    return this.http.get<Todomodel>(this.apiURL + '/tasks/' + id)
   }  
 
   // HttpClient API post() method => Create todo
-  createTodo(tasks): Observable<todomodel> {
+  createTodo(tasks): Observable<Todomodel> {
     console.log('trying to save', JSON.stringify(tasks));
-    return this.http.post<todomodel>(this.apiURL + '/tasks', JSON.stringify(tasks), this.httpOptions)
+    return this.http.post<Todomodel>(this.apiURL + '/tasks', JSON.stringify(tasks), this.httpOptions)
   }  
 
   // HttpClient API put() method => Update todo
-  updateTodo(id, tasks): Observable<todomodel> {
+  updateTodo(id, tasks): Observable<Todomodel> {
     console.log('trying to update',id, tasks);
-    return this.http.put<todomodel>(this.apiURL + '/tasks/' + id, JSON.stringify(tasks), this.httpOptions)
+    return this.http.put<Todomodel>(this.apiURL + '/tasks/' + id, JSON.stringify(tasks), this.httpOptions)
   }
 
   // HttpClient API delete() method => Delete todo
   deleteTodo(id){
-    return this.http.delete<todomodel>(this.apiURL + '/tasks/' + id, this.httpOptions)
+    return this.http.delete<Todomodel>(this.apiURL + '/tasks/' + id, this.httpOptions)
     
   }
 

@@ -1,4 +1,4 @@
-export class todomodel {
+export class Todomodel {
 
     constructor (
         public id: number,

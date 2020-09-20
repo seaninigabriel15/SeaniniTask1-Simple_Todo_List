@@ -1,6 +1,6 @@
 <body>
   <div class="container">
-  <div id="task-container"><!----css # (id)-->
+   <div id="task-container"><!----css # (id)-->
       <div id="form-wrapper">
           <form id="form" (ngSubmit)="onSubmit()" #todoForm="ngForm" >    
                   <div class="flex-wrapper">
@@ -16,9 +16,8 @@
                   </div>  
                   <br>
                   <div class ="txtTask">
-                    Tasks:{{   remaining()   }} remaining task of  {{getTotal()}}
-                    
-                  </div>  
+                    <b>Task Completed:</b> {{ remaining() }} / {{  getTotal()  }} Tasks
+                  </div> 
                   <div *ngIf="atLeastOneCompleted()">
                   <button class="btn btn-sm btn-info pull-right" (click)="clearCompleted()">Clear Completed</button>        
                 </div>           

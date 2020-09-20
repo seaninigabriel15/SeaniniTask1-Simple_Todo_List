@@ -15,8 +15,9 @@
       "completed": false
     },
     {
-      "taskTitle": "fgdfg",
-      "id": 7
+      "taskTitle": "Wash Dishes",
+      "id": 7,
+      "completed": false
     }
   ]
 }
