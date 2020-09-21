@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
 import {Todomodel} from "./todomodel";
 
 //service
-import { TodoService } from './todo.service';
+import { TodoService } from './services/todo.service';
 
 @Component({
   selector: 'app-root',
