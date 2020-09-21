@@ -44,7 +44,7 @@ export class AppComponent implements OnInit{
       if (this.tasks.taskTitle=='') return;
       // saving new todo
         this.dataservice.createTodo(tasks).subscribe(data=> {
-        // this.displayTodoList();
+        this.displayTodoList();
       });
     }
     // if we are editing an existing todo
@@ -54,7 +54,7 @@ export class AppComponent implements OnInit{
             // update existing todo
       this.dataservice.updateTodo(this.tasks.id,this.tasks).subscribe(data =>
         {     
-          //this.displayTodoList();
+          this.displayTodoList();
         }       
         );
     }    
@@ -101,6 +101,7 @@ export class AppComponent implements OnInit{
     FuncDelete(id: number) { // without type info
       console.log('delete', id);    
       this.dataservice.deleteTodo(id).subscribe();
+      this.displayTodoList();
     }
 
     //editing an existing todo
@@ -108,6 +109,7 @@ export class AppComponent implements OnInit{
       console.log('editing',eid);
       this.tasks = this.taskslist.filter(x=>x.id ==eid)[0];
       this.edited = true;   
+      this.displayTodoList();
     }
 
  
